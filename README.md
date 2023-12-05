@@ -1,5 +1,7 @@
 # Трекер полезных привычек
 
+### Для проекта по курсу DOCKER были добавлены файлы 'Dockerfile' и 'Docker-compose'
+
 ## Приложения для отслеживания выполнения привычек
 
 ## Основная модель
@@ -60,6 +62,12 @@
   celery -A config worker -l info
   celery -A config beat -l info -S django 
   ```
+  
+* Работу сервера так же можнор осуществить через Docker
+  ```
+  docker-compose up --build
+  ```
+  
 ## CORS
 Для безопасности API реализован CORS с помощью django-cors-headers. 
 
@@ -79,4 +87,3 @@ CSRF_TRUSTED_ORIGINS = [
 Документация для API реализована с помощью drf-yasg и находится на следующих эндпоинтах:
 * http://127.0.0.1:8000/docs/
 * http://127.0.0.1:8000/redoc/
-
